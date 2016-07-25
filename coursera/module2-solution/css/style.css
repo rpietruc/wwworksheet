@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+p {
+    margin: 0px;
+    font-family: Helvetica;
+}
+
+/* Simple Responsive Framework. */
+.row {
+    width: 100%;
+}
+
+.col {
+    float: left;
+    border: 2px solid black;
+    background-color: lightgrey;
+    margin: 1.5%;
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        width: 30%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-6 {
+        width: 47%;
+    }
+    .col-md-12 {
+        width: 97%;
+    }
+}
+
+p.name {
+    position: relative;
+    left: 50%;
+    width: 50%;
+    border: 2px solid black;
+    text-align: center;
+    padding: 2px;
+    font-size: 150%;
+}
+
+.col-md-12 > p.text {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-12 > p.name {
+        position: relative;
+        left: 75%;
+        width: 25%;
+    }
+}
+
+.text {
+    padding: 2%;
+}
+
+.name.vege {
+    background-color: lightgreen;
+}
+
+.name.gfree {
+    background-color: lightblue;
+}
+.name.vines {
+    background-color: lightcoral;
+}
