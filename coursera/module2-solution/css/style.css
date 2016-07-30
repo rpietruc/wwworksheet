@@ -13,7 +13,6 @@ p {
     font-family: Helvetica;
 }
 
-/* Simple Responsive Framework. */
 .row {
     width: 100%;
 }
@@ -25,12 +24,28 @@ p {
     margin: 1.5%;
 }
 
+/* Large screen:
+ *
+ * 3 columns at one row
+ * 3x 30% /per column
+ * 6x  2% /per margin
+ */
 @media (min-width: 992px) {
     .col-lg-4 {
         width: 30%;
     }
 }
 
+/* Medium screen:
+ *
+ * 2 columns at first row
+ * 2x 47% /per column
+ * 3x  2% /per margin
+ *
+ * 1 column at second row
+ * 1x 97.0% /per column
+ * 2x  1.5% /per margin
+ */
 @media (min-width: 768px) and (max-width: 991px) {
     .col-md-6 {
         width: 47%;
@@ -38,8 +53,24 @@ p {
     .col-md-12 {
         width: 97%;
     }
+    .col-md-12 > p.text {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-12 > p.name {
+        position: relative;
+        left: 76%;
+        width: 24%;
+    }
+}
+
+/*
+ * section tiltes:
+ * 50% left
+ */
 p.name {
     position: relative;
     left: 50%;
@@ -49,31 +80,19 @@ p.name {
     padding: 2px;
     font-size: 150%;
 }
-
-.col-md-12 > p.text {
-    padding-left: 1%;
-    padding-right: 1%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .col-md-12 > p.name {
-        position: relative;
-        left: 75%;
-        width: 25%;
-    }
-}
-
-.text {
-    padding: 2%;
-}
-
+/*
+ * section tiltes colors:
+ */
 .name.vege {
     background-color: lightgreen;
 }
-
 .name.gfree {
     background-color: lightblue;
 }
 .name.vines {
     background-color: lightcoral;
+}
+
+.text {
+    padding: 2%;
 }
